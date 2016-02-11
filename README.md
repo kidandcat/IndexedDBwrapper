@@ -1,59 +1,31 @@
 # IndexedDBwrapper
 
-
 var db = new JairoDB('jairo3');
 
-db.addStore({
-    storeName: 'coche10',
-    key: 'color10',
-    indexes: [
-        {
-            name: 'nombre',
-            unique: false
-        },
-        {
-            name: 'ruedas',
-            unique: false
-        }
-    ]
-}, function () {
-    console.log('done');
-    write();
-}, function () {
-    console.log('error1');
-});
 
-
-function write() {
-    db.write({
-        storeName: 'coche10',
-        items: [
+                addStore
+object = {
+    storeName: 'string',
+    key:       'property of object',
+    indexes(optional):  (array of objects)
+        [
             {
-                color10: 'verde',
-                nombre: 'juan',
-                ruedas: 5
+                name: 'object property name',
+                unique: false
             },
             {
-                color10: 'rojo',
-                nombre: 'juan',
-                ruedas: 5
+                name: 'object property name',
+                unique: false
+            },
+            {
+                name: 'object property name',
+                unique: false
             }
         ]
-    }, function () {
-        console.log('done');
-        read();
-    }, function () {
-        console.log('error2');
-    });
 }
+db.addStore(object, successCallback, errorCallback)
 
-function read() {
-    db.readByKey({
-        storeName: 'coche10',
-        key: 'rojo',
-    }, function (s) {
-        console.log(s);
-    }, function () {
-        console.log('error3');
-    });
-}
+
+
+
+
