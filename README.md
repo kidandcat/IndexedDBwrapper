@@ -3,7 +3,7 @@
 var db = new JairoDB('jairo3');
 
 
-###addStore
+###db.addStore
               object = {
                   storeName: 'string',
                   key:       'property of object',
@@ -27,7 +27,7 @@ var db = new JairoDB('jairo3');
               db.addStore(object, successCallback, errorCallback)
 
 
-###write
+###db.write
               object = {
                   storeName: 'string',
                   items:  (array of objects)
@@ -42,3 +42,20 @@ var db = new JairoDB('jairo3');
 
 
 
+###db.readByKey
+              object = {
+                  storeName: 'string',
+                  key: 'string'
+              }
+              
+              db.readByKey(object, successCallback, errorCallback)
+
+
+
+###db.deleteByKey 
+              object = {
+                  storeName: 'string',
+                  key: 'string'
+              }
+              
+              db.readByKey(object, successCallback, errorCallback)
