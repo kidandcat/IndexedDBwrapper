@@ -5,7 +5,7 @@ var db = new JairoDB('jairo3');
 
 ###db.addStore
               object = {
-                  storeName: 'string',
+                  storeName: 'store name',
                   key:       'property of object',
                   indexes(optional):  (array of objects)
                       [
@@ -29,7 +29,7 @@ var db = new JairoDB('jairo3');
 
 ###db.write
               object = {
-                  storeName: 'string',
+                  storeName: 'store name',
                   items:  (array of objects)
                       [
                           myObject1,
@@ -44,8 +44,8 @@ var db = new JairoDB('jairo3');
 
 ###db.readByKey
               object = {
-                  storeName: 'string',
-                  key: 'string'
+                  storeName: 'store name',
+                  key: 'property name'
               }
               
               db.readByKey(object, successCallback, errorCallback)
@@ -54,8 +54,8 @@ var db = new JairoDB('jairo3');
 
 ###db.deleteByKey 
               object = {
-                  storeName: 'string',
-                  key: 'string'
+                  storeName: 'store name',
+                  key: 'property name'
               }
               
               db.deleteByKey(object, successCallback, errorCallback)
@@ -64,3 +64,14 @@ var db = new JairoDB('jairo3');
 ###db.getAll
               
               db.getAll( (string)storeName, successCallback, errorCallback)
+
+
+
+###db.getByIndex 
+              object = {
+                  storeName: 'store name',
+                  index: 'property name',
+                  value: 'property value'
+              }
+              
+              db.getByIndex(object, successCallback, errorCallback)
