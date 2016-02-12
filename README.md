@@ -58,4 +58,4 @@ var db = new JairoDB('jairo3');
                   key: 'string'
               }
               
-              db.readByKey(object, successCallback, errorCallback)
+              db.deleteByKey(object, successCallback, errorCallback)
