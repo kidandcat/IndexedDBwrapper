@@ -23,9 +23,22 @@ var db = new JairoDB('jairo3');
                           }
                       ]
               }
+              
               db.addStore(object, successCallback, errorCallback)
 
 
+###write
+              object = {
+                  storeName: 'string',
+                  items:  (array of objects)
+                      [
+                          myObject1,
+                          myObject2,
+                          myObject3
+                      ]
+              }
+              
+              db.write(object, successCallback, errorCallback)
 
 
 
