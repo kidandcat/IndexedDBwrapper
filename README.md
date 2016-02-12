@@ -59,3 +59,8 @@ var db = new JairoDB('jairo3');
               }
               
               db.deleteByKey(object, successCallback, errorCallback)
+
+
+###db.getAll
+              
+              db.getAll( (string)storeName, successCallback, errorCallback)
